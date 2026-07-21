@@ -18,16 +18,16 @@ function Cadastro(){
                 </Link>
             </div>
 
-            <div>
+            <div className={styles.container}>
                 <h1 className={styles.txtCadastro}>Cadastro</h1>
 
-                <div>
+                <div className={styles.linha}>
                     <input placeholder="Nome" type="text" name="" className={styles.input} />
                     <input placeholder="Idade" type="int" name="" className={styles.input} />
 
                 </div>
 
-                <div>
+                <div className={styles.linha}>
                     <input placeholder="Telefone" type="text" name="" className={styles.input} />
                     <input placeholder="Login" type="text" name="" className={styles.input} />
                 </div>
@@ -38,7 +38,7 @@ function Cadastro(){
             </div>
 
             <div>
-                <img src={Background6} />
+                <img src={Background6} className={styles.imgBackground6}/>
             </div>
 
         </div>
