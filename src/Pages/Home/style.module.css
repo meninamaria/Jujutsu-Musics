@@ -3,7 +3,6 @@
     height: 73px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     box-sizing: border-box;
     background-color: white;
     color: black;
@@ -12,9 +11,15 @@
         margin-left: 19px;
     }
 
+    & .txt {
+        margin-left: 20px;
+    }
+
     & .bt_login {
         width: 100px;
         height: 30px;
+        margin-left: 1250px;
+        margin-right: auto;
         border-radius: 20px;
         background: #FEBCD6;
         border: none;

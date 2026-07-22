@@ -23,7 +23,7 @@ function Cadastro(){
 
                 <div className={styles.linha}>
                     <input placeholder="Nome" type="text" name="" className={styles.input} />
-                    <input placeholder="Idade" type="int" name="" className={styles.input} />
+                    <input placeholder="Idade" type="number" name="" className={styles.input} />
 
                 </div>
 

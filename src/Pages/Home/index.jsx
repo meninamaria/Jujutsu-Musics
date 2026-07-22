@@ -14,7 +14,7 @@ function Home() {
     <div>
       <header className={styles.cabecalho}>
         <img src={Icone} className={styles.img_icon} />
-        <h1>Jujutso musics</h1>
+        <h1 className={styles.txt}>Jujutso musics</h1>
         <Link to="/login">
           <button className={styles.bt_login}>Login</button>
         </Link>

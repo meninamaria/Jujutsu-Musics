@@ -4,11 +4,11 @@
     width: 100%;
 }
 
-.setaVoltar {
+.SetaVoltar {
     margin-left: 15px;
 }
 
-.setaVoltar:hover {
+.SetaVoltar:hover {
     cursor: pointer;
 }
 
@@ -101,6 +101,7 @@
 
 .img_background4 {
     display: block; /* Transforma a imagem em bloco */
-    margin-left: 980px; /* Empurra a imagem para a direita */
+    margin-left: 950px; /* Empurra a imagem para a direita */
     margin-right: auto; /* Empurra a imagem para a esquerda */
+    margin-top: -120px;
 }

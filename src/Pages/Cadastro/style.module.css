@@ -37,7 +37,6 @@
     margin-left: 400px;
     padding: 20px;
     gap: 28px;
-    border: 1px solid #AFAFAF;
 
     & .linha {
         display: flex;
@@ -84,6 +83,8 @@
 }
 
 .imgBackground6 {
-    margin-left: 600px;
+    display: block; 
+    margin-left: 600px; 
+    margin-right: auto; 
     
 }
