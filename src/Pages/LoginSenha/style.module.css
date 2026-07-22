@@ -4,11 +4,12 @@
     width: 100%;
 }
 
-.SetaVoltar {
+.setaVoltar {
     margin-left: 15px;
+    margin-top: 20px;
 }
 
-.SetaVoltar:hover {
+.setaVoltar:hover {
     cursor: pointer;
 }
 
@@ -88,6 +89,7 @@
         font-style: normal;
         background: transparent;
         border: none;
+        text-decoration: underline;
     }
 
     & .bt_Cadastrar:hover {
@@ -97,13 +99,27 @@
     & .input::placeholder {
         color: white;
     }
+
+    & .bt_EsqueciASenha {
+        border: none;
+        color: #828186;
+        font-family: "Alice", serif;
+        font-size: 16px;
+        font-style: normal;
+        background: transparent;
+        margin-left: 140px;
+        text-decoration: underline;
+    }
+    & .bt_EsqueciASenha:hover {
+        cursor: pointer;
+    }
 }
 
 .img_background4 {
     display: block; /* Transforma a imagem em bloco */
     margin-left: 950px; /* Empurra a imagem para a direita */
     margin-right: auto; /* Empurra a imagem para a esquerda */
-    margin-top: -120px;
+    margin-top: -170px;
 }
 
 .bt_OK {

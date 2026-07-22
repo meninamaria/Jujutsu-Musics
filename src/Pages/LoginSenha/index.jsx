@@ -46,19 +46,22 @@ function LoginSenha() {
         <div className={styles.pagina}>
             <header className={styles.cabecalho}>
                 <div><img src={Icone} className={styles.img_icon} /></div>
-                <div><h1>Jujutso Musics</h1></div>
+                <div><h1>Jujutso musics</h1></div>
             </header>
-
-            <div>            
-                <Link to="/" className={styles.SetaVoltar}>
-                    <img src={SetaVoltar} />
-                </Link>
-            </div>
+        
+            <Link to="/">
+                <img className={styles.setaVoltar} src={SetaVoltar} />
+            </Link>
 
             <div className={styles.container}>
                 <h1 className={styles.txtLogin}>Login</h1>
                 <input placeholder="Login" type="text" name="login" className={styles.input} ref={inputLogin}/>
                 <input placeholder="Senha" type="password" name="senha" className={styles.input} ref={inputSenha} />
+
+                <Link to="/recuperarSenha/verificacao">
+                    <button type="button" className={styles.bt_EsqueciASenha}>Esqueci a senha</button>
+                </Link>
+
                 <button type="button" onClick={() => verificarLogin(inputLogin.current.value, inputSenha.current.value)} className={styles.bt_entrar}>Entrar</button>  {/* usar o navigate() para verificar se os dados inseridos estão corretos*/} 
                 <p className={styles.texto}>Ainda não possui cadastro?</p>
                 

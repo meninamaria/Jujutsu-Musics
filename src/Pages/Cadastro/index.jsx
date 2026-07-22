@@ -85,14 +85,12 @@ function Cadastro(){
         <div className={styles.pagina}>
             <header className={styles.cabecalho}>
                 <img src={Icone} className={styles.img_icon}/>
-                <h1>Jujutso Musics</h1>
+                <h1>Jujutso musics</h1>
             </header>
             
-            <div>
-                <Link to="/login">
-                    <img src={setaVoltar} className={styles.setaVoltar} />    
-                </Link>
-            </div>
+            <Link to="/login">
+                <img src={setaVoltar} className={styles.setaVoltar} />    
+            </Link>
 
             <div className={styles.container}>
                 <h1 className={styles.txtCadastro}>Cadastro</h1>

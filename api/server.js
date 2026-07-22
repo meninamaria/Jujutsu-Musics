@@ -69,7 +69,7 @@ app.post('/login', async (req, res) => {
 })
 
 // Página: Recuperar senha - Verificacao
-app.get('/recuperarSenha/verificacao/:login', async (req, res) => {
+app.post('/recuperarSenha/verificacao/:login', async (req, res) => {
 
     let users = [];
 

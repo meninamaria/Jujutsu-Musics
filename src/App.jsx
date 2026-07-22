@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cadastro from "./Pages/Cadastro/index";
 import LoginSenha from "./Pages/LoginSenha/index";
 import RecuperarSenha from "./Pages/RecuperarSenha/index";
+import RecuperarSenha_Verificacao from "./Pages/RecuperarSenha_Verificacao/index";
 import Home from "./Pages/Home/index"
 import Api from './services/api'
 
@@ -12,7 +13,8 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/cadastro" element={<Cadastro />} />
                 <Route path="/login" element={<LoginSenha />} />
-                <Route path="/recuperacao" element={<RecuperarSenha />} />
+                <Route path="/recuperarSenha" element={<RecuperarSenha />} />
+                <Route path="/recuperarSenha/verificacao" element={<RecuperarSenha_Verificacao/>}></Route>
             </Routes>
       </BrowserRouter>   
     )
