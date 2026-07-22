@@ -27,7 +27,7 @@ app.post('/cadastro', async (req, res) => {
 
     try {
         const usuarioExistente = await prisma.user.findUnique({
-        where: { login }
+            where: { login }
         });
 
         if (usuarioExistente) {
@@ -46,6 +46,60 @@ app.post('/cadastro', async (req, res) => {
     }
 })
 
+// Página: Login
+app.get('/login', async (req, res) => {
 
-// Porta do Cadastro
+    let users = [];
+
+    users = await prisma.user.findMany ({
+        where: {
+            login: req.body.login,
+            senha: req.body.senha
+        }
+    });
+
+    if (users.length == 0) {
+        return res.status(400).json({ erro: "Seu login ou senha está incorreto(a)."});
+    }  else {
+        return res.status(201).json(users);
+    }
+})
+
+// Página: Recuperar senha - Verificacao
+app.get('/recuperarSenha/verificacao/:login', async (req, res) => {
+
+    let users = [];
+
+    users = await prisma.user.findMany({
+        where: {
+            login: req.params.login
+        }
+    });
+
+    if (users.length == 0) {
+        return res.status(400).json({ erro: "Nome de usuário inválido."});
+    } else {
+        return res.status(201).json(users);
+    }
+
+})
+
+// Página: Recuperar senha - Altareção
+app.patch('/recuperarSenha/:id', async (req, res) => {
+
+    await prisma.user.update({
+        where: {
+            id: Number(req.params.id)
+        },
+        data: {
+            senha: req.body.senha
+        }
+    })
+
+    res.status(201).json(req.body)
+
+})
+
+
+// Porta 
 app.listen(3000)
