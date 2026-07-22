@@ -3,6 +3,7 @@ import Cadastro from "./Pages/Cadastro/index";
 import LoginSenha from "./Pages/LoginSenha/index";
 import RecuperarSenha from "./Pages/RecuperarSenha/index";
 import Home from "./Pages/Home/index"
+import Api from './services/api'
 
 function App() {
     return (

@@ -30,8 +30,12 @@ app.post('/cadastro', async (req, res) => {
             where: { login }
         });
 
+        if (nome === "" || idade === "" || telefone === "" || login === "" || senha === "") {
+            return res.status(403).json({ erro: 'Campo vazio! Preencha todos os campos' });
+        }
+
         if (usuarioExistente) {
-            return res.status(400).json({ erro: 'Login já está em uso.' });
+            return res.status(402).json({ erro: 'Login já está em uso.' });
         }
 
         const novoUsuario = await prisma.user.create({
@@ -41,13 +45,12 @@ app.post('/cadastro', async (req, res) => {
         return res.status(201).json(novoUsuario);
 
     } catch (error) {
-        console.error(error);
         return res.status(500).json({ erro: 'Erro ao cadastrar usuário.' });
     }
 })
 
 // Página: Login
-app.get('/login', async (req, res) => {
+app.post('/login', async (req, res) => {
 
     let users = [];
 
