@@ -20,7 +20,7 @@ function LoginSenha() {
         try {
             const usuario = await Api.post("/login", { login, senha });
                 setUsers(usuario.data);
-                navigate('/'); 
+                navigate('/inicio'); 
         } catch (error) {
             Swal.fire({
                 title: 'Error!',
