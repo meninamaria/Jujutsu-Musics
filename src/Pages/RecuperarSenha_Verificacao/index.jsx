@@ -17,7 +17,7 @@ function recuperarSenha_verificacao() {
     async function verificarLogin(login) {
         try {
             const usuario = await Api.post(`/recuperarSenha/verificacao/${login}`)
-            navigate('recuperarSenha');
+            navigate('/recuperarSenha', { state: { usuario: usuario.data[0] } });
         } catch {
             Swal.fire({
                 title: 'Error!',
